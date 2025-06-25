@@ -1,8 +1,8 @@
 import { useState } from "react"
 import Task from "./Task"
-
+// import data from "./data"
 export default function App() {
-  const [items, setItems] = useState(["dfd1", "dfasdf@"])
+  const [items, setItems] = useState(["Red", "Blue", "Green"])
   const [newItem, setNewItem] = useState("")
 
   function handleChange(e) {
@@ -11,7 +11,9 @@ export default function App() {
 
   function handleSubmit(e) {
     e.preventDefault()
+    if (newItem === "") return
     setItems([...items, newItem])
+    setNewItem("") // ✅ resets the input field
   }
 
   function handleDelete(index) {
@@ -40,7 +42,7 @@ export default function App() {
     <div>
       <form onSubmit={handleSubmit}>
         <input value={newItem} onChange={handleChange} type="text"></input>
-        <button>sumbit</button>
+        <button>submit</button>
       </form>
       {itemsList}
     </div>
