@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Task from "./Task"
 // import data from "./data"
+
 export default function App() {
   const [items, setItems] = useState(["Red", "Blue", "Green"])
   const [newItem, setNewItem] = useState("")
@@ -41,7 +42,7 @@ export default function App() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input value={newItem} onChange={handleChange} type="text"></input>
+        <input value={newItem} onChange={handleChange} type="text" />
         <button>submit</button>
       </form>
       {itemsList}
