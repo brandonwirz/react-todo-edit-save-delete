@@ -2,8 +2,13 @@ import { useState } from "react"
 import Task from "./Task"
 // import data from "./data"
 
+// console.log(data)
+
 export default function App() {
-  const [items, setItems] = useState(["Red", "Blue", "Green"])
+  // const myData = map.dat((d) => {
+  //   return <div>{data.text}</div>
+  // })
+  const [items, setItems] = useState(["data"])
   const [newItem, setNewItem] = useState("")
 
   function handleChange(e) {
@@ -46,6 +51,7 @@ export default function App() {
         <button>submit</button>
       </form>
       {itemsList}
+      {/* {myData} */}
     </div>
   )
 }

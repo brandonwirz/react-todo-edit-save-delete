@@ -1,10 +1,10 @@
 import { useState } from "react"
 
 export default function Task(props) {
-  const [editText, setEditText] = useState("")
+  const [editText, setEditText] = useState(props.task)
   const [isEditable, setIsEditable] = useState(false)
 
-  function handleSave() {
+  function handleClick() {
     props.handleSave(editText)
     setIsEditable(false)
   }
@@ -20,8 +20,12 @@ export default function Task(props) {
     </div>
   ) : (
     <div>
-      <input onChange={(e) => setEditText(e.target.value)} />
-      <button onClick={handleSave}>save</button>
+      <input
+        value={editText}
+        placeholder="edit"
+        onChange={(e) => setEditText(e.target.value)}
+      />
+      <button onClick={handleClick}>save</button>
     </div>
   )
 }
