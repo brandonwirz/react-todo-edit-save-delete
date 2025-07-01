@@ -115,3 +115,6 @@ button.button-spacing {
 .purple {
   color: #673ab7;
 }
+.column {
+  flex-direction: row;
+}

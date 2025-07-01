@@ -20,11 +20,7 @@ export default function Task(props) {
     </div>
   ) : (
     <div>
-      <input
-        value={editText}
-        placeholder="edit"
-        onChange={(e) => setEditText(e.target.value)}
-      />
+      <input value={editText} onChange={(e) => setEditText(e.target.value)} />
       <button onClick={handleClick}>save</button>
     </div>
   )
