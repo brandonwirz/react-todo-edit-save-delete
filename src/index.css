@@ -8,7 +8,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-size: 2em;
+  font-size: 1.5em;
   box-sizing: border-box;
   background: #833ab4;
   background: linear-gradient(to right, #673ab7, #cac5c5, #ffffff);
@@ -20,7 +20,14 @@ html {
   box-sizing: border-box;
   height: 100%;
 }
-
+.container {
+  width: 500px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 small {
   opacity: 0.4;
   margin-top: 20px;
@@ -37,10 +44,10 @@ h1 {
   font-weight: bold;
   margin-top: 0.67em;
 }
-ul.current-todos {
+/* ul.current-todos {
   text-align: left;
-}
-.todo-list {
+} */
+/* .todo-list {
   padding-top: 10px;
   width: 400px;
 }
@@ -56,15 +63,15 @@ ul.current-todos {
   align-items: center;
   justify-content: space-between;
   color: #000;
-}
+} */
 
-.todo-text {
+/* .todo-text {
   cursor: pointer;
 }
 
 .todo-completed {
   text-decoration: line-through;
-}
+} */
 
 button {
   border: 0;
@@ -73,10 +80,10 @@ button {
   font-size: 18px;
 }
 
-.todo button {
+/* .todo button {
   color: #f37070;
   background: transparent;
-}
+} */
 
 input {
   background: #fff;
@@ -110,11 +117,27 @@ form button {
 
 button.button-spacing {
   margin: 0 5px 0;
+  height: 25px;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 .purple {
   color: #673ab7;
 }
-.column {
-  flex-direction: row;
+div.leading {
+  display: flex;
+  margin-top: 20px;
+}
+.buttons {
+  display: flex;
+  justify-items: left;
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+li.column {
+  display: flex;
 }

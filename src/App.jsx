@@ -7,9 +7,12 @@ console.log(data)
 export default function App() {
   const myData = data.map((d) => {
     return (
-      <div className="column" key={d.id}>
-        {d.text}
-      </div>
+      <ul>
+        <li key={d.id}>
+          {/* {d.id} */}
+          {d.text}
+        </li>
+      </ul>
     )
   })
   const [items, setItems] = useState(myData)
@@ -49,7 +52,7 @@ export default function App() {
   ))
 
   return (
-    <div>
+    <div className="container">
       <form onSubmit={handleSubmit}>
         <input value={newItem} onChange={handleChange} type="text" />
         <button>submit</button>
