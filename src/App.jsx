@@ -5,17 +5,7 @@ import data from "./data"
 console.log(data)
 
 export default function App() {
-  const myData = data.map((d) => {
-    return (
-      <ul>
-        <li key={d.id}>
-          {/* {d.id} */}
-          {d.text}
-        </li>
-      </ul>
-    )
-  })
-  const [items, setItems] = useState(myData)
+  const [items, setItems] = useState(data)
   const [newItem, setNewItem] = useState("")
 
   function handleChange(e) {
@@ -25,7 +15,7 @@ export default function App() {
   function handleSubmit(e) {
     e.preventDefault()
     if (newItem === "") return
-    setItems([...items, newItem])
+    setItems([...items, { text: newItem, id: Math.ceil(Math.random() * 1000) }])
     setNewItem("") // ✅ resets the input field
   }
 

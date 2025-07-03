@@ -1,11 +1,11 @@
 import { useState } from "react"
 
 export default function Task(props) {
-  const [editText, setEditText] = useState(props.task)
+  const [editText, setEditText] = useState(props.task.text)
   const [isEditable, setIsEditable] = useState(false)
 
   function handleClick() {
-    props.handleSave(editText)
+    props.handleSave({ text: editText, id: props.task.setIsEditable })
     setIsEditable(false)
   }
 
@@ -13,7 +13,7 @@ export default function Task(props) {
   return !isEditable ? (
     <div className="leading">
       <div className="buttons">
-        {props.task}
+        {props.task.text}
         <button className="button-spacing" onClick={props.handleDelete}>
           x
         </button>
